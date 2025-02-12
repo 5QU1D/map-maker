@@ -1,4 +1,4 @@
-console.log("Hello,Javascript!"); //initial tester of file
+//console.log("Hello,Javascript!"); //initial tester of file
 
 function draw() {
     const canvas = document.getElementById("canvas");
