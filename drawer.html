@@ -1,35 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
-  <body>
-    <input type="file" id="FileInput">
-    <div id="fileContents"></div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Drawer</title>
+    </head>
+    <body>
 
-    <script>
-        document
-        .getElementById('FileInput')
-        .addEventListener('change', function (event) {
-            let file = event.target.files[0];
-            let reader = new FileReader();
+        <!-- https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/#filereaderreadasarraybuffer-method -->
+        <input type="file" id="FileInput">
+        <div id="fileContents"></div>
 
-            reader.onload = function (event) {
-                let arrayBuffer = event.target.result;
-                let array = new Uint8Array(arrayBuffer);
+        <script>
+            document
+            .getElementById('FileInput')
+            .addEventListener('change', function (event) {
+                let file = event.target.files[0];
+                let reader = new FileReader();
 
-                //Display some info about the file - testing purposes
-                let fileSize = arrayBuffer.byteLength;
-                let bytes = [];
-                for (let i = 0; i < Math.min(20, fileSize); i++) {
-                    bytes.push(array[i]);
-                }
-                document
-                    .getElementById('fileContents')
-                    .textContent = 'First 20 butes of file as ArrayBuffer: ' + bytes.join(', ');
-                console.log('ArrayBuffer:', arrayBuffer);
-            };
+                reader.onload = function (event) {
+                    let arrayBuffer = event.target.result;
+                    let array = new Uint8Array(arrayBuffer);
 
-            reader.readAsArrayBuffer(file);
-        });
-    </script>
+                    //Display some info about the file - testing purposes
+                    let fileSize = arrayBuffer.byteLength;
+                    let bytes = [];
+                    for (let i = 0; i < Math.min(20, fileSize); i++) {
+                        bytes.push(array[i]);
+                    }
+                    document
+                        .getElementById('fileContents')
+                        .textContent = 'First 20 butes of file as ArrayBuffer: ' + bytes.join(', ');
+                    console.log('ArrayBuffer:', arrayBuffer);
+                };
 
-    <canvas id="canvas" width="200" height="185"></canvas>  <!-- how do i pass in values for width and height -->
-  </body>
+                reader.readAsArrayBuffer(file);
+            });
+        </script>
+
+        <canvas id="canvas" width="200" height="185"></canvas>  <!-- how do i pass in values for width and height -->
+    </body>
 </html>
