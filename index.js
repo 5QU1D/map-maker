@@ -1,4 +1,4 @@
-console.log("Hello,Javascript!");
+console.log("Hello,Javascript!"); //initial tester of file
 
 function draw() {
     const canvas = document.getElementById("canvas");
@@ -15,6 +15,6 @@ function draw() {
       //ctxt.fill(); //fill for shapes/enclosed areas
       ctxt.stroke();
     }
-  }
+}
   
   draw();
