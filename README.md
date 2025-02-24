@@ -8,10 +8,15 @@ A project by Syd A.
   - html has head and body tags *(2/11)*
   - html has some scripting with intent to read in a file (further data handling required) *(2/11)*
 - README now serves as a project overview as well as a simple progress tracker. Thoughts and concerns can be expressed here, as well as within commented sections of the project code.
+- Grid math: each grid tile will be a 150x150 px square. Grid sizes will be stored to the file as tile numbers; the conversion from number of tiles to full px values for the canvas will be done within a script *(2/24)*
+- File values:
+  - First line: HEIGHT (number of tiles, integer), WIDTH (number of tiles, integer)
+  - Subsequent lines: rows of the grid (will be stored in a 2D array)
+    - tuples: (CONTENT (char), EXTREMENESS (float))
 
 ## To Do
 
-- [ ] initial grid math
+- [x] initial grid math
   - [ ] pass grid size into html canvas
 - [ ] subdivide grid
 - [ ] determine drawing inputs for each map "feature" type
