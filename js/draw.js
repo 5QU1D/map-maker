@@ -1,3 +1,8 @@
+//uncertain if necessary
+//to call functions from other scripts:
+// import { myFunction } from './module.js'; //brackets are necessary part of import
+
+
 //draw grid
 // https://stackoverflow.com/questions/11735856/draw-a-grid-on-an-html-5-canvas-element
 function drawGrid(width,height){
