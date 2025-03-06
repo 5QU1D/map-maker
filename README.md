@@ -13,6 +13,7 @@ A project by Syd A.
   - First line: HEIGHT (number of tiles, integer), WIDTH (number of tiles, integer)
   - Subsequent lines: rows of the grid (will be stored in a 2D array)
     - tuples separated by spaces: (CONTENT (char),EXTREMENESS (float))
+    - empty "tiles" in (0,0) format for ease of parsing
 
 ## To Do
 

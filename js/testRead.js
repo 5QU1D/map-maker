@@ -5,37 +5,16 @@ document
         let reader = new FileReader();
 
         reader.onload = function (event) {
-            let arrayBuffer = event.target.result;
-            let array = new Uint8Array(arrayBuffer);
-
-            //Display some info about the file - testing purposes
-            let fileSize = arrayBuffer.byteLength;
-            //let bytes = []; //structure of empty array declaration
+            const file = event.target.result;
             let width = 120;
             let height = 120;
+
+            const lines = file.split(/\r\n|\n/);
+            //content = lines.join('\n');
             
-            width = width * array[0];
-            height = height * array[1];
-            // let tile : [char, float]; //only a valid structure in TS
-            // a guide to TS arrays and tuples: https://type-level-typescript.com/arrays-and-tuples
+            width = width * lines[0][0];
+            height = height * lines[0][2];
 
-            //from James
-            // let tupleArray: [string, number][][] = [
-            //     [
-            //       ["apple", 1],
-            //       ["banana", 2]
-            //     ],
-            //     [
-            //       ["cherry", 3],
-            //       ["date", 4]
-            //     ],
-            //     [
-            //       ["elderberry", 5],
-            //       ["fig", 6]
-            //     ]
-            //   ];
-
-            // same sort of structure, I just can't do type annotations
             // let threeDArray = [
             //     [
             //       ['A1', 'A2'],
@@ -65,21 +44,41 @@ document
             //     data[i][1] = somethingElse;
             //    }
 
-            // read from array (built from buffer) into bytes (empty array we declared on line 13)
-            for (let i = 0; i < Math.min(20, fileSize); i++) {
-                bytes.push(array[i]);
+            //check if lines.length() is valid syntax
+
+            let threeDArray = new Array();
+
+            //4 chars to a tile coord, plus the space between coords
+            // 3 3
+            // 00(0,0) 01(0,0) 02(C,1)
+            // 10(M,1) 11(0,0) 12(0,0)
+            // 20(0,0) 21(R,1) 22(0,0)
+            
+            for (let i = 0; i < width; i++) {
+                threeDArray[i] = new Array();
+                for (let j = 0; j < height; j++) {
+                    threeDArray[i][j] = new Array();
+                }
             }
 
+            //i can calc how many tuples (and therefore chars) in a line[i]
+                //= width*(4*5) + (width-1)
+
+
             // here will be the read from array into a 2D array of tuples for the grid
-            // outer for loop (row)
-                // inner for loop (column)
+            for (let i = 1; i < lines.length(); i++) {
+                for (let j = 0; j < lines[i].length(); j++) {
+                    //read in from lines[i] (a string) to threeDArray[i-1][i-1][0] and threeDArray[i-1][i-1][1]
+                }
+            }
 
             document
                 .getElementById('fileContents')
                 //print string and the content of the bytes array, seaparated by comma and space
-                .textContent = 'TEXT HERE' + bytes.join(', ');
-            console.log('ArrayBuffer:', arrayBuffer);
+                .textContent = 'width ' + width + ' tiles ' + lines[0][0] + ' height ' + height + ' tiles ' + lines[0][2];
+            //console.log('ArrayBuffer:', arrayBuffer);
         };
 
-        reader.readAsArrayBuffer(file);
+        reader.onerror = (event) => alert(event.error.name);
+        reader.readAsText(file);
     });
