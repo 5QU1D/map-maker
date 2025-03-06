@@ -10,7 +10,12 @@ document
 
             //Display some info about the file - testing purposes
             let fileSize = arrayBuffer.byteLength;
-            let bytes = []; //structure of empty array declaration
+            //let bytes = []; //structure of empty array declaration
+            let width = 120;
+            let height = 120;
+            
+            width = width * array[0];
+            height = height * array[1];
             // let tile : [char, float]; //only a valid structure in TS
             // a guide to TS arrays and tuples: https://type-level-typescript.com/arrays-and-tuples
 
