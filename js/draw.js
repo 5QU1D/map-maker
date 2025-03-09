@@ -1,12 +1,10 @@
-//uncertain if necessary
-//to call functions from other scripts:
-// import { myFunction } from './module.js'; //brackets are necessary part of import
-
-
 //draw grid
 // https://stackoverflow.com/questions/11735856/draw-a-grid-on-an-html-5-canvas-element
 function drawGrid(width,height){
-    const canvas = document.getElementById("canvas");
+    canvas = document.getElementById("canvas");
+    canvas.width = width;
+    canvas.height = height;
+
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
       ctxt.save();
@@ -16,16 +14,18 @@ function drawGrid(width,height){
 
       var pad = 10; //padding
       //adjust width and height to account for external grid padding
-      width -= 20;
-      height -= 20;
+      var Nwidth = width - 20;
+      var Nheight = height - 20;
 
       for(var x = 0; x <= width; x += 120){
         ctxt.moveTo(0.5 + x + pad, pad);
-        ctxt.lineTo(0.5 + x + pad, height+pad);
+        ctxt.lineTo(0.5 + x + pad, Nheight+pad);
+        ctxt.stroke();
       }
       for (var y = 0; y <=height; y+=120){
         ctxt.moveTo(pad, 0.5 + y + pad);
-        ctxt.lineTo(width + pad, 0.5 + y + pad);
+        ctxt.lineTo(Nwidth + pad, 0.5 + y + pad);
+        ctxt.stroke();
       }
 
       ctxt.stroke();
