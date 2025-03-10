@@ -12,7 +12,7 @@ function tileParse(){
                     drawMountain(row,col);
                     break;
                 case 'V':
-                    //drawValley(row,col);
+                    drawValley(row,col);
                     break;
                 case 'C':
                     drawSettlement(row,col);

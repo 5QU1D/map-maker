@@ -90,3 +90,13 @@ function drawForest(tileRow, tileCol){
 
     }
 }
+
+//draw valley (d20)
+function drawValley(tileRow, tileCol){
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctxt = canvas.getContext("2d");
+
+
+  }
+}
