@@ -52,9 +52,9 @@ function read(event) {
             // 10(M,1) 11(0,0) 12(0,0)
             // 20(0,0) 21(R,1) 22(0,0)
             
-            for (let i = 0; i < tileW; i++) {
+            for (let i = 0; i < tileH; i++) {
                 threeDArray[i] = new Array();
-                for (let j = 0; j < tileH; j++) {
+                for (let j = 0; j < tileW; j++) {
                     threeDArray[i][j] = new Array();
                 }
             }
@@ -84,9 +84,9 @@ function read(event) {
 
             tilesArray = new Array();
 
-            for (let i = 0; i < tileW; i++) {
+            for (let i = 0; i < tileH; i++) {
                 tilesArray[i] = new Array();
-                for (let j = 0; j < tileH; j++) {
+                for (let j = 0; j < tileW; j++) {
                     tilesArray[i][j] = new Array();
                 }
             }
