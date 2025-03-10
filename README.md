@@ -21,12 +21,13 @@ A project by Syd A.
   - [x] pass grid size into html canvas *(3/8)*
 - [x] subdivide grid
   - [x] ensure grid-drawing script fires *after* file is read *(3/10)*
-- [ ] determine drawing inputs for each map "feature" type (and create assets!!)
+- [ ] create assets for tiles ~~determine drawing inputs for each map "feature" type (and create assets!!)~~
   - [ ] mountain
   - [ ] city
   - [ ] lake
   - [ ] valley
   - [ ] river
+- [ ] implement asset placement
 
 The draw function will likely divide into sub-functions for drawing the different features, taking in a grid square meant to be drawn within, and the feature type and extremeness value. The extremeness value determines how much of the grid square is utilized. The feature type determines which drawing function is used.
 
