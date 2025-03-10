@@ -20,7 +20,7 @@ A project by Syd A.
 - [x] initial grid math
   - [x] pass grid size into html canvas *(3/8)*
 - [x] subdivide grid
-  - [ ] ensure grid-drawing script fires *after* file is read
+  - [x] ensure grid-drawing script fires *after* file is read *(3/10)*
 - [ ] determine drawing inputs for each map "feature" type (and create assets!!)
   - [ ] mountain
   - [ ] city

@@ -70,8 +70,8 @@ function read(event) {
             for (let i = 1; i <= tileH; i++) {
                 for (let j = 0; j < tileW; j++) {
                     //read in from lines[i] (a string) to threeDArray[i-1][j][0] and threeDArray[i-1][j][1]
-                    threeDArray[i-1][j][0] = 1 + 5*j;
-                    threeDArray[i-1][j][1] = 3 + 5*j;
+                    threeDArray[i-1][j][0] = lines[i][1 + 6*j];
+                    threeDArray[i-1][j][1] = lines[i][3 + 6*j];
                 }
             }
 
@@ -81,5 +81,20 @@ function read(event) {
 
             tilesHeight = height;
             tilesWidth = width;
-            tilesArray = threeDArray;
+
+            tilesArray = new Array();
+
+            for (let i = 0; i < tileW; i++) {
+                tilesArray[i] = new Array();
+                for (let j = 0; j < tileH; j++) {
+                    tilesArray[i][j] = new Array();
+                }
+            }
+
+            for (let i = 0; i < threeDArray.length; i++) {
+                for (let j = 0; j < threeDArray[i].length; j++) {
+                    tilesArray[i][j].push(threeDArray[i][j][0]);
+                    tilesArray[i][j].push(threeDArray[i][j][1]);
+                }
+            }
 }

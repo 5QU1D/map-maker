@@ -2,8 +2,8 @@
 // https://stackoverflow.com/questions/11735856/draw-a-grid-on-an-html-5-canvas-element
 function drawGrid(width,height){
     canvas = document.getElementById("canvas");
-    canvas.width = width;
-    canvas.height = height;
+    canvas.width = width + 20;
+    canvas.height = height + 20;
 
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
@@ -14,22 +14,22 @@ function drawGrid(width,height){
 
       var pad = 10; //padding
       //adjust width and height to account for external grid padding
-      var Nwidth = width - 20;
-      var Nheight = height - 20;
 
       for(var x = 0; x <= width; x += 120){
         ctxt.moveTo(0.5 + x + pad, pad);
-        ctxt.lineTo(0.5 + x + pad, Nheight+pad);
-        ctxt.stroke();
-      }
-      for (var y = 0; y <=height; y+=120){
-        ctxt.moveTo(pad, 0.5 + y + pad);
-        ctxt.lineTo(Nwidth + pad, 0.5 + y + pad);
-        ctxt.stroke();
+        ctxt.lineTo(0.5 + x + pad, height+pad);
+        //ctxt.stroke();
       }
 
+      for (var y = 0; y <=height; y+=120){
+        ctxt.moveTo(pad, 0.5 + y + pad);
+        ctxt.lineTo(width + pad, 0.5 + y + pad);
+        //ctxt.stroke();
+      }
       ctxt.stroke();
       ctxt.closePath();
+
+      tileParse();
     }
 }
 
@@ -42,8 +42,8 @@ function drawRiver(tileRow, tileCol){
       ctxt.strokeStyle = "black";
       ctxt.fillStyle = "blue";
 
-      startX = (tileRow*120)+10;
-      startY = (tileCol*120)+10;
+      startX = (tileCol*120)+10;
+      startY = (tileRow*120)+10;
 
       ctxt.fillRect(startX, startY, 120, 120); //fills the full tile with blue by drawing blue-fill rectangle
     }
@@ -57,8 +57,8 @@ function drawMountain(tileRow, tileCol){
 
       ctxt.strokeStyle = "black";
 
-      startX = (tileRow*120)+10;
-      startY = (tileCol*120)+10;
+      startX = (tileCol*120)+10;
+      startY = (tileRow*120)+10;
       
       ctxt.beginPath();
       ctxt.moveTo(startX,startY);

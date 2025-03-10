@@ -7,6 +7,7 @@ document
         reader.onload = function (event) {
             read(event);
             drawGrid(tilesWidth,tilesHeight);
+            tileParse();
         };
 
         reader.onerror = (event) => alert(event.error.name);
