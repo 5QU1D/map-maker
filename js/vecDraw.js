@@ -41,13 +41,11 @@ function drawRiver(tileRow, tileCol){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/rivers/River1.svg'; //know it's not a source issue
+    image.src = 'assets/rivers/River2.svg';
 
     image.onload = function(){
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
-      //console.log(image.src);
-      //console.log(startX,startY,image.width,image.height);
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
@@ -55,21 +53,17 @@ function drawRiver(tileRow, tileCol){
   }
 }
 
-// working with SVGs: https://github.com/canvg/canvg
-
 //draw mountain (d10)
 function drawMountain(tileRow, tileCol){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
       var image = new Image(120,120);
-      image.src = 'assets/mountains/Mountains.svg'; //know it's not a source issue
+      image.src = 'assets/mountains/Mountains.svg';
 
       image.onload = function(){
         startX = (tileCol*120)+10;
         startY = (tileRow*120)+10;
-        //console.log(image.src);
-        //console.log(startX,startY,image.width,image.height);
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
       }
@@ -83,13 +77,11 @@ function drawSettlement(tileRow, tileCol){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/settlements/Settlement.svg'; //know it's not a source issue
+    image.src = 'assets/settlements/Settlement.svg';
 
     image.onload = function(){
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
-      //console.log(image.src);
-      //console.log(startX,startY,image.width,image.height);
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
@@ -103,13 +95,11 @@ function drawForest(tileRow, tileCol){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/forests/Forest.svg'; //know it's not a source issue
+    image.src = 'assets/forests/Forest.svg';
 
     image.onload = function(){
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
-      //console.log(image.src);
-      //console.log(startX,startY,image.width,image.height);
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
@@ -123,13 +113,11 @@ function drawValley(tileRow, tileCol){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/valleys/Valley.svg'; //know it's not a source issue
+    image.src = 'assets/valleys/Valley.svg';
 
     image.onload = function(){
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
-      //console.log(image.src);
-      //console.log(startX,startY,image.width,image.height);
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
