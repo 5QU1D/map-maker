@@ -23,15 +23,30 @@ A project by Syd A.
   - [x] ensure grid-drawing script fires *after* file is read *(3/10)*
 - [ ] create assets for tiles ~~determine drawing inputs for each map "feature" type (and create assets!!)~~
   - [ ] mountain
+    - [ ] extremeness 1
+    - [ ] extremeness 2
+    - [x] extremeness 3 *(3/11)*
   - [ ] city
+    - [ ] extremeness 1
+    - [ ] extremeness 2
+    - [x] extremeness 3 *(3/11)*
   - [ ] lake
+    - [ ] extremeness 1
+    - [ ] extremeness 2
+    - [x] extremeness 3 *(3/11)*
   - [ ] valley
+    - [ ] extremeness 1
+    - [ ] extremeness 2
+    - [x] extremeness 3 *(3/11)*
   - [ ] river
-- [ ] implement asset placement
+    - [ ] extremeness 1
+    - [ ] extremeness 2
+    - [x] extremeness 3 *(3/11)*
+- [x] implement asset placement *(3/11)*
+- [ ] implement extremeness handling for draw functions
 
 The draw function will likely divide into sub-functions for drawing the different features, taking in a grid square meant to be drawn within, and the feature type and extremeness value. The extremeness value determines how much of the grid square is utilized. The feature type determines which drawing function is used.
 
-Later(?) work will focus on the hosting. For now testing is done in a JS playground, but I worry that that will restrict how much I can do when it comes to testing out reading file input.
-
 - [x] Live testing environment
-- [ ] Hosting
+- [x] Hosting
+  - [ ] Hosting off of GitHub
