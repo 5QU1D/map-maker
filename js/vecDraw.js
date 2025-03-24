@@ -37,18 +37,22 @@ function drawGrid(width,height){
 
 //draw river (d6)
 function drawRiver(tileRow, tileCol){
-    const canvas = document.getElementById("canvas");
-    if (canvas.getContext) {
-      const ctxt = canvas.getContext("2d");
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctxt = canvas.getContext("2d");
+    var image = new Image(120,120);
+    image.src = 'assets/rivers/River1.svg'; //know it's not a source issue
 
-      ctxt.strokeStyle = "black";
-      ctxt.fillStyle = "blue";
-
+    image.onload = function(){
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
+      //console.log(image.src);
+      //console.log(startX,startY,image.width,image.height);
 
-      ctxt.fillRect(startX, startY, 120, 120); //fills the full tile with blue by drawing blue-fill rectangle
+      ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
+    
+  }
 }
 
 // working with SVGs: https://github.com/canvg/canvg
@@ -75,22 +79,42 @@ function drawMountain(tileRow, tileCol){
 
 //draw settlement (d8)
 function drawSettlement(tileRow, tileCol){
-    const canvas = document.getElementById("canvas");
-    if (canvas.getContext) {
-      const ctxt = canvas.getContext("2d");
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctxt = canvas.getContext("2d");
+    var image = new Image(120,120);
+    image.src = 'assets/settlements/Settlement.svg'; //know it's not a source issue
 
+    image.onload = function(){
+      startX = (tileCol*120)+10;
+      startY = (tileRow*120)+10;
+      //console.log(image.src);
+      //console.log(startX,startY,image.width,image.height);
 
+      ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
+    
+  }
 }
 
 //draw forest (d20)
 function drawForest(tileRow, tileCol){
-    const canvas = document.getElementById("canvas");
-    if (canvas.getContext) {
-      const ctxt = canvas.getContext("2d");
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctxt = canvas.getContext("2d");
+    var image = new Image(120,120);
+    image.src = 'assets/forests/Forest.svg'; //know it's not a source issue
 
+    image.onload = function(){
+      startX = (tileCol*120)+10;
+      startY = (tileRow*120)+10;
+      //console.log(image.src);
+      //console.log(startX,startY,image.width,image.height);
 
+      ctxt.drawImage(image, startX, startY, image.width, image.height);
     }
+    
+  }
 }
 
 //draw valley (d20)
@@ -98,7 +122,17 @@ function drawValley(tileRow, tileCol){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
+    var image = new Image(120,120);
+    image.src = 'assets/valleys/Valley.svg'; //know it's not a source issue
 
+    image.onload = function(){
+      startX = (tileCol*120)+10;
+      startY = (tileRow*120)+10;
+      //console.log(image.src);
+      //console.log(startX,startY,image.width,image.height);
 
+      ctxt.drawImage(image, startX, startY, image.width, image.height);
+    }
+    
   }
 }
