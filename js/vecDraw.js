@@ -36,12 +36,26 @@ function drawGrid(width,height){
 }
 
 //draw river (d6)
-function drawRiver(tileRow, tileCol){
+function drawRiver(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/rivers/River2.svg';
+
+    switch(extremeness){
+      case 1:
+        image.src = 'assets/rivers/River1.svg';
+        break;
+      case 2:
+        image.src = 'assets/rivers/River2.svg';
+        break;
+      case 3:
+        image.src = 'assets/rivers/River3.svg';
+        break;
+      default:
+        //use original tile as default
+        image.src = 'assets/rivers/River.svg';
+    }
 
     image.onload = function(){
       startX = (tileCol*120)+10;
@@ -54,12 +68,26 @@ function drawRiver(tileRow, tileCol){
 }
 
 //draw mountain (d10)
-function drawMountain(tileRow, tileCol){
+function drawMountain(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
       var image = new Image(120,120);
-      image.src = 'assets/mountains/Mountains.svg';
+
+      switch(extremeness){
+        case 1:
+          image.src = 'assets/rivers/Mountain1.svg';
+          break;
+        case 2:
+          image.src = 'assets/rivers/Mountain2.svg';
+          break;
+        case 3:
+          image.src = 'assets/rivers/Mountain3.svg';
+          break;
+        default:
+          //use original tile as default
+          image.src = 'assets/rivers/Mountains.svg';
+      }
 
       image.onload = function(){
         startX = (tileCol*120)+10;
@@ -72,12 +100,26 @@ function drawMountain(tileRow, tileCol){
 }
 
 //draw settlement (d8)
-function drawSettlement(tileRow, tileCol){
+function drawSettlement(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/settlements/Settlement.svg';
+
+    switch(extremeness){
+      case 1:
+        image.src = 'assets/rivers/Settlement1.svg';
+        break;
+      case 2:
+        image.src = 'assets/rivers/Settlement2.svg';
+        break;
+      case 3:
+        image.src = 'assets/rivers/Settlement3.svg';
+        break;
+      default:
+        //use original tile as default
+        image.src = 'assets/rivers/Settlement.svg';
+    }
 
     image.onload = function(){
       startX = (tileCol*120)+10;
@@ -90,12 +132,26 @@ function drawSettlement(tileRow, tileCol){
 }
 
 //draw forest (d20)
-function drawForest(tileRow, tileCol){
+function drawForest(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/forests/Forest.svg';
+
+    switch(extremeness){
+      case 1:
+        image.src = 'assets/rivers/Forest1.svg';
+        break;
+      case 2:
+        image.src = 'assets/rivers/Forest2.svg';
+        break;
+      case 3:
+        image.src = 'assets/rivers/Forest3.svg';
+        break;
+      default:
+        //use original tile as default
+        image.src = 'assets/rivers/Forest.svg';
+    }
 
     image.onload = function(){
       startX = (tileCol*120)+10;
@@ -108,12 +164,26 @@ function drawForest(tileRow, tileCol){
 }
 
 //draw valley (d20)
-function drawValley(tileRow, tileCol){
+function drawValley(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
-    image.src = 'assets/valleys/Valley.svg';
+
+    switch(extremeness){
+      case 1:
+        image.src = 'assets/rivers/Valley1.svg';
+        break;
+      case 2:
+        image.src = 'assets/rivers/Valley2.svg';
+        break;
+      case 3:
+        image.src = 'assets/rivers/Valley3.svg';
+        break;
+      default:
+        //use original tile as default
+        image.src = 'assets/rivers/Valley.svg';
+    }
 
     image.onload = function(){
       startX = (tileCol*120)+10;
