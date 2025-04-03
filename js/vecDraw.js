@@ -76,17 +76,17 @@ function drawMountain(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case 1:
-          image.src = 'assets/rivers/Mountain1.svg';
+          image.src = 'assets/mountains/Mountain1.svg';
           break;
         case 2:
-          image.src = 'assets/rivers/Mountain2.svg';
+          image.src = 'assets/mountains/Mountain2.svg';
           break;
         case 3:
-          image.src = 'assets/rivers/Mountain3.svg';
+          image.src = 'assets/mountains/Mountain3.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/rivers/Mountains.svg';
+          image.src = 'assets/mountains/Mountains.svg';
       }
 
       image.onload = function(){
@@ -108,17 +108,17 @@ function drawSettlement(tileRow, tileCol, extremeness){
 
     switch(extremeness){
       case 1:
-        image.src = 'assets/rivers/Settlement1.svg';
+        image.src = 'assets/settlements/Settlement1.svg';
         break;
       case 2:
-        image.src = 'assets/rivers/Settlement2.svg';
+        image.src = 'assets/settlements/Settlement2.svg';
         break;
       case 3:
-        image.src = 'assets/rivers/Settlement3.svg';
+        image.src = 'assets/settlements/Settlement3.svg';
         break;
       default:
         //use original tile as default
-        image.src = 'assets/rivers/Settlement.svg';
+        image.src = 'assets/settlements/Settlement.svg';
     }
 
     image.onload = function(){
@@ -140,17 +140,17 @@ function drawForest(tileRow, tileCol, extremeness){
 
     switch(extremeness){
       case 1:
-        image.src = 'assets/rivers/Forest1.svg';
+        image.src = 'assets/forests/Forest1.svg';
         break;
       case 2:
-        image.src = 'assets/rivers/Forest2.svg';
+        image.src = 'assets/forests/Forest2.svg';
         break;
       case 3:
-        image.src = 'assets/rivers/Forest3.svg';
+        image.src = 'assets/forests/Forest3.svg';
         break;
       default:
         //use original tile as default
-        image.src = 'assets/rivers/Forest.svg';
+        image.src = 'assets/forests/Forest.svg';
     }
 
     image.onload = function(){
@@ -172,17 +172,17 @@ function drawValley(tileRow, tileCol, extremeness){
 
     switch(extremeness){
       case 1:
-        image.src = 'assets/rivers/Valley1.svg';
+        image.src = 'assets/valleys/Valley1.svg';
         break;
       case 2:
-        image.src = 'assets/rivers/Valley2.svg';
+        image.src = 'assets/valleys/Valley2.svg';
         break;
       case 3:
-        image.src = 'assets/rivers/Valley3.svg';
+        image.src = 'assets/valleys/Valley3.svg';
         break;
       default:
         //use original tile as default
-        image.src = 'assets/rivers/Valley.svg';
+        image.src = 'assets/valleys/Valley.svg';
     }
 
     image.onload = function(){
