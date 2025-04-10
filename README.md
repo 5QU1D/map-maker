@@ -26,6 +26,7 @@ A project by Syd A.
 ## To Do
 - [x] File generation program *(4/9)*
   - [ ] Add documentation to README file for program, and link in this project's README
+- [ ] Two more extremenesses per tile type for first set (5 extremenesses in total)
 - [ ] Two tile variant sets
     - [ ] Desert
     - [ ] Tropical? or Tundra? or maybe Savannah?
