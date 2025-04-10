@@ -93,7 +93,7 @@ function drawMountain(tileRow, tileCol, extremeness){
         startX = (tileCol*120)+10;
         startY = (tileRow*120)+10;
 
-        ctxt.drawImage(image, startX, startY, image.width, image.height);
+        ctxt.drawImage(image, startX, startY, 120, 120);
       }
       
     }
