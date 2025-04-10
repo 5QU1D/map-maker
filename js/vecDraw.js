@@ -58,14 +58,14 @@ function drawMountain(tileRow, tileCol){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image();
       image.src = 'assets/mountains/Mountains.svg';
 
       image.onload = function(){
         startX = (tileCol*120)+10;
         startY = (tileRow*120)+10;
 
-        ctxt.drawImage(image, startX, startY, image.width, image.height);
+        ctxt.drawImage(image, startX, startY, 120, 120);
       }
       
     }
