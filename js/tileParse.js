@@ -6,19 +6,19 @@ function tileParse(){
 
             switch(type) {
                 case 'R':
-                    drawRiver(row,col);
+                    drawRiver(row,col, extremeness);
                     break;
                 case 'M':
-                    drawMountain(row,col);
+                    drawMountain(row,col, extremeness);
                     break;
                 case 'V':
-                    drawValley(row,col);
+                    drawValley(row,col, extremeness);
                     break;
                 case 'C':
-                    drawSettlement(row,col);
+                    drawSettlement(row,col, extremeness);
                     break;
                 case 'F':
-                    drawForest(row,col);
+                    drawForest(row,col, extremeness);
                     break;
                 default:
                     //leave blank
