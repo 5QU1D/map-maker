@@ -24,7 +24,8 @@ A project by Syd A.
 - hosting through GitHub Pages is live
 
 ## To Do
-- [ ] File generation program
+- [x] File generation program *(4/9)*
+  - [ ] Add documentation to README file for program, and link in this project's README
 - [ ] Two tile variant sets
     - [ ] Desert
     - [ ] Tropical? or Tundra? or maybe Savannah?
