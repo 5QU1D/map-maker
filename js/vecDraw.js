@@ -1,5 +1,3 @@
-//import { Canvg } from 'canvg'
-
 //draw grid
 // https://stackoverflow.com/questions/11735856/draw-a-grid-on-an-html-5-canvas-element
 function drawGrid(width,height){
@@ -43,14 +41,20 @@ function drawRiver(tileRow, tileCol, extremeness){
     var image = new Image(120,120);
 
     switch(extremeness){
-      case 1:
+      case '1':
         image.src = 'assets/rivers/River1.svg';
         break;
-      case 2:
+      case '2':
         image.src = 'assets/rivers/River2.svg';
         break;
-      case 3:
+      case '3':
         image.src = 'assets/rivers/River3.svg';
+        break;
+      case '4':
+        image.src = 'assets/rivers/River4.svg';
+        break;
+      case '5':
+        image.src = 'assets/rivers/River5.svg';
         break;
       default:
         //use original tile as default
@@ -75,14 +79,20 @@ function drawMountain(tileRow, tileCol, extremeness){
       var image = new Image(120,120);
 
       switch(extremeness){
-        case 1:
+        case '1':
           image.src = 'assets/mountains/Mountain1.svg';
           break;
-        case 2:
+        case '2':
           image.src = 'assets/mountains/Mountain2.svg';
           break;
-        case 3:
+        case '3':
           image.src = 'assets/mountains/Mountain3.svg';
+          break;
+        case '4':
+          image.src = 'assets/mountains/Mountain4.svg';
+          break;
+        case '5':
+          image.src = 'assets/mountains/Mountain5.svg';
           break;
         default:
           //use original tile as default
@@ -107,14 +117,20 @@ function drawSettlement(tileRow, tileCol, extremeness){
     var image = new Image(120,120);
 
     switch(extremeness){
-      case 1:
+      case '1':
         image.src = 'assets/settlements/Settlement1.svg';
         break;
-      case 2:
+      case '2':
         image.src = 'assets/settlements/Settlement2.svg';
         break;
-      case 3:
+      case '3':
         image.src = 'assets/settlements/Settlement3.svg';
+        break;
+      case '4':
+        image.src = 'assets/settlements/Settlement4.svg';
+        break;
+      case '5':
+        image.src = 'assets/settlements/Settlement5.svg';
         break;
       default:
         //use original tile as default
@@ -139,14 +155,20 @@ function drawForest(tileRow, tileCol, extremeness){
     var image = new Image(120,120);
 
     switch(extremeness){
-      case 1:
+      case '1':
         image.src = 'assets/forests/Forest1.svg';
         break;
-      case 2:
+      case '2':
         image.src = 'assets/forests/Forest2.svg';
         break;
-      case 3:
+      case '3':
         image.src = 'assets/forests/Forest3.svg';
+        break;
+      case '4':
+        image.src = 'assets/forests/Forest4.svg';
+        break;
+      case '5':
+        image.src = 'assets/forests/Forest5.svg';
         break;
       default:
         //use original tile as default
@@ -171,14 +193,20 @@ function drawValley(tileRow, tileCol, extremeness){
     var image = new Image(120,120);
 
     switch(extremeness){
-      case 1:
+      case '1':
         image.src = 'assets/valleys/Valley1.svg';
         break;
-      case 2:
+      case '2':
         image.src = 'assets/valleys/Valley2.svg';
         break;
-      case 3:
+      case '3':
         image.src = 'assets/valleys/Valley3.svg';
+        break;
+      case '4':
+        image.src = 'assets/valleys/Valley4.svg';
+        break;
+      case '5':
+        image.src = 'assets/valleys/Valley5.svg';
         break;
       default:
         //use original tile as default
