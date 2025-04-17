@@ -39,6 +39,7 @@ function drawRiver(tileRow, tileCol, extremeness){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
+    image.crossOrigin="anonymous";
 
     switch(extremeness){
       case '1':
@@ -66,6 +67,8 @@ function drawRiver(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
+      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
+      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
     
   }
@@ -77,6 +80,7 @@ function drawMountain(tileRow, tileCol, extremeness){
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
       var image = new Image(120,120);
+      image.crossOrigin="anonymous";
 
       switch(extremeness){
         case '1':
@@ -103,7 +107,9 @@ function drawMountain(tileRow, tileCol, extremeness){
         startX = (tileCol*120)+10;
         startY = (tileRow*120)+10;
 
-        ctxt.drawImage(image, startX, startY, 120, 120);
+        ctxt.drawImage(image, startX, startY, image.width, image.height);
+        // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
+        // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
       }
       
     }
@@ -115,6 +121,7 @@ function drawSettlement(tileRow, tileCol, extremeness){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
+    image.crossOrigin="anonymous";
 
     switch(extremeness){
       case '1':
@@ -142,6 +149,8 @@ function drawSettlement(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
+      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
+      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
     
   }
@@ -153,6 +162,7 @@ function drawForest(tileRow, tileCol, extremeness){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
+    image.crossOrigin="anonymous";
 
     switch(extremeness){
       case '1':
@@ -180,6 +190,8 @@ function drawForest(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
+      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
+      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
     
   }
@@ -191,6 +203,7 @@ function drawValley(tileRow, tileCol, extremeness){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     var image = new Image(120,120);
+    image.crossOrigin="anonymous";
 
     switch(extremeness){
       case '1':
@@ -218,6 +231,8 @@ function drawValley(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
+      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
+      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
     
   }
