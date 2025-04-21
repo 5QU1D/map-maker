@@ -62,7 +62,7 @@ function drawRiver(tileRow, tileCol, extremeness){
         image.src = 'assets/rivers/River.svg';
     }
 
-    image.onload = function(){
+    image.onload = () => {
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
 
@@ -103,7 +103,7 @@ function drawMountain(tileRow, tileCol, extremeness){
           image.src = 'assets/mountains/Mountains.svg';
       }
 
-      image.onload = function(){
+      image.onload = () => {
         startX = (tileCol*120)+10;
         startY = (tileRow*120)+10;
 
@@ -144,7 +144,7 @@ function drawSettlement(tileRow, tileCol, extremeness){
         image.src = 'assets/settlements/Settlement.svg';
     }
 
-    image.onload = function(){
+    image.onload = () => {
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
 
@@ -226,7 +226,7 @@ function drawValley(tileRow, tileCol, extremeness){
         image.src = 'assets/valleys/Valley.svg';
     }
 
-    image.onload = function(){
+    image.onload = () => {
       startX = (tileCol*120)+10;
       startY = (tileRow*120)+10;
 
