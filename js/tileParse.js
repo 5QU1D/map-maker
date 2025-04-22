@@ -25,4 +25,6 @@ function tileParse(){
             }
         }
     }
+    // const canvas = document.getElementById("canvas");
+    // console.log(Canvas2Image.convertToPNG(canvas, (tilesWidth*120)+40, (tilesHeight*120)+40));
 }
