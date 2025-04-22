@@ -25,6 +25,9 @@ A project by Syd A.
 
 ## To Do
 - [x] File generation program *(4/9)*
+- [ ] Export canvas to PNG for display and download
+  - [ ] Display *(partial implementation done 4/22)*
+  - [ ] Download
   - [ ] Add documentation to README file for program, and link in this project's README
 - [ ] Two more extremenesses per tile type for first set (5 extremenesses in total)
 - [ ] Two tile variant sets
