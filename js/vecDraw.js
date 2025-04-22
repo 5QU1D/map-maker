@@ -1,5 +1,3 @@
-//preload all images to make functionality async
-
 //draw grid
 // https://stackoverflow.com/questions/11735856/draw-a-grid-on-an-html-5-canvas-element
 function drawGrid(width,height){
@@ -20,23 +18,18 @@ function drawGrid(width,height){
     for(var x = 0; x <= width; x += 120){
       ctxt.moveTo(0.5 + x + pad, pad);
       ctxt.lineTo(0.5 + x + pad, height+pad);
-      //ctxt.stroke();
     }
 
     for (var y = 0; y <=height; y+=120){
       ctxt.moveTo(pad, 0.5 + y + pad);
       ctxt.lineTo(width + pad, 0.5 + y + pad);
-      //ctxt.stroke();
     }
     ctxt.stroke();
     ctxt.closePath();
-
-    // tileParse();
-    blobber();
   }
 }
 
-//draw river (d6)
+//draw river
 function drawRiver(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -70,13 +63,11 @@ function drawRiver(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
-      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
-      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
   }
 }
 
-//draw mountain (d10)
+//draw mountain
 function drawMountain(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -110,13 +101,11 @@ function drawMountain(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
-      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
-      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
   }
 }
 
-//draw settlement (d8)
+//draw settlement
 function drawSettlement(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -150,13 +139,11 @@ function drawSettlement(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
-      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
-      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
   }
 }
 
-//draw forest (d20)
+//draw forest
 function drawForest(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -190,13 +177,11 @@ function drawForest(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
-      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
-      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
   }
 }
 
-//draw valley (d20)
+//draw valley
 function drawValley(tileRow, tileCol, extremeness){
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -230,16 +215,14 @@ function drawValley(tileRow, tileCol, extremeness){
       startY = (tileRow*120)+10;
 
       ctxt.drawImage(image, startX, startY, image.width, image.height);
-      // ctxt.drawSvg(image.src, startX, startY, image.width, image.height); //off-center rendering, doesn't add to canvas
-      // canvg(canvas, image.src, {ignoreDimensions: true, ignoreMouse: true, ignoreAnimation: true, offsetX: startX, offsetY: startY, scaleWidth: image.width, scaleHeight: image.height}) //overwrites preexisting canvas, doesn't render on png conversion
     }
   }
 }
 
 async function blobber() {
   await tileParse();
+  //adding a breakpoint here means it all fires correctly, but no break point means incorrect firing
   canvas.toBlob((blob) => {
-    // preloader();
     const url = URL.createObjectURL(blob);
     console.log(url);
     document.getElementById('finMap').src = url;
