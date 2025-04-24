@@ -1,5 +1,5 @@
-function tileParse(){
-    return new Promise((resolve) => {
+async function tileParse(){
+    // return new Promise(async (resolve) => {
         for (let row = 0; row < tilesArray.length ; row++) {
             for (let col = 0; col < tilesArray[row].length ; col++) {
                 let type = tilesArray[row][col][0];
@@ -7,25 +7,26 @@ function tileParse(){
 
                 switch(type) {
                     case 'R':
-                        drawRiver(row,col, extremeness);
+                        await drawRiver(row,col, extremeness);
                         break;
                     case 'M':
-                        drawMountain(row,col, extremeness);
+                        await drawMountain(row,col, extremeness);
                         break;
                     case 'V':
-                        drawValley(row,col, extremeness);
+                        await drawValley(row,col, extremeness);
                         break;
                     case 'C':
-                        drawSettlement(row,col, extremeness);
+                        await drawSettlement(row,col, extremeness);
                         break;
                     case 'F':
-                        drawForest(row,col, extremeness);
+                        await drawForest(row,col, extremeness);
                         break;
                     default:
                         //leave blank
                 }
             }
-        }    
-    resolve();
-    })
+        }  
+        console.log("parsing")  
+    // resolve();
+    // })
 }

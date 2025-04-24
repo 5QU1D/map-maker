@@ -9,8 +9,9 @@ function read(event) {
             let lines = new Array();
             lines = Object.values(line);
             
-            tileW = lines[0][0];
-            tileH = lines[0][2];
+            let whString = lines[0].split(" ");
+            let tileW = whString[0];
+            let tileH = whString[1];
             width = width * tileW;
             height = height * tileH;
 
