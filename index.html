@@ -3,24 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <title>Map Drawer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap">
+        <link rel="stylesheet" href="index.css">
     </head>
 
-    <script type="module" src="js/main.js"></script>
-    <script type="text/javascript" src="js/read.js"></script>
-    <script type="text/javascript" src="js/vecDraw.js"></script>
-    <script type="text/javascript" src="js/tileParse.js"></script>
-
     <body>
-
-        <!-- https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/#filereaderreadasarraybuffer-method -->
-        <input type="file" id="FileInput">
-        <div id="fileContents"></div>
-
-        <script type="text/javascript" src="js/load.js"></script>
-
-        <!-- <canvas id="canvas"></canvas> -->
+        <div id="title">Map Drawer</div>
         <canvas id="canvas" style="display: none;"></canvas> <!-- use this one to hide canvas -->
-        <img id="finMap", crossorigin="anonymous"><img>
+
+        <input type="file" id="FileInput">
+
+        <div id="map">
+            <!-- https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/#filereaderreadasarraybuffer-method -->
+            <img id="finMap", crossorigin="anonymous" src="https://placehold.co/1200x800"><img> <!-- remove src when finished calibrating! -->
+        </div>
+
+        <div id="desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor tempus quam, ac pretium purus facilisis ut. Pellentesque ut dolor velit. Suspendisse dictum velit in nisi semper suscipit. Suspendisse ut leo eget ligula volutpat tempus ut id nibh. Donec quis lorem et diam egestas dignissim id porttitor sem. Maecenas quis semper tellus, sed ullamcorper magna. Nullam sit amet dui maximus, cursus nunc eu, efficitur sapien. Nam mattis sit amet tellus pulvinar dapibus. Phasellus ac porta arcu. Aenean hendrerit id mi id lacinia.</p>
+            <p>Nam viverra turpis sit amet massa gravida, quis consectetur leo auctor. Nunc at interdum urna, nec pellentesque ante. Fusce eu lacus non tortor lobortis egestas eu sit amet nunc. Cras aliquam, purus at pretium sollicitudin, eros turpis finibus felis, nec placerat orci eros at sapien. Morbi mi massa, hendrerit a sollicitudin at, rhoncus ut arcu. Pellentesque vestibulum augue vel elit ultrices semper. Vestibulum vel purus enim. Maecenas semper fermentum quam, a rutrum felis feugiat sed. Sed metus lorem, congue vitae urna eget, ultricies eleifend leo.</p>
+            <p>Proin at ullamcorper sapien, id laoreet nunc. Cras urna leo, aliquet et lobortis sed, feugiat ac mauris. Aenean euismod felis a molestie convallis. Sed sem enim, dignissim vel tristique molestie, accumsan et ante. Donec tempus dolor feugiat eleifend commodo. Aliquam id dolor placerat magna tristique accumsan ut ac massa. Duis luctus justo a vestibulum pellentesque. Nunc hendrerit, metus in faucibus porta, est velit elementum augue, id porta dui magna a orci.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim tortor a condimentum commodo. Duis orci turpis, dignissim quis mattis a, feugiat quis sapien. Etiam placerat justo id hendrerit interdum. In est quam, faucibus ut erat sed, tempor auctor turpis. Maecenas massa tortor, volutpat sit amet lorem vel, elementum consequat nisl. Mauris in vestibulum leo. Vestibulum a magna at lectus sodales congue.</p>
+            <p>Nulla sodales urna in nulla efficitur ornare. Nunc vitae laoreet libero, ut ultricies justo. Vivamus augue mauris, hendrerit ut ex quis, blandit elementum nunc. Sed imperdiet ut enim fringilla aliquam. Morbi fringilla, magna sit amet hendrerit suscipit, ex ipsum iaculis purus, molestie tristique arcu purus ut purus. Suspendisse ut velit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed at lectus dignissim, varius justo nec, suscipit eros. Mauris nec lacus eget ligula eleifend facilisis. Maecenas risus mauris, dictum vel maximus quis, finibus ut arcu. Proin eget libero dolor. </p>
+        </div>
         <!-- <a download id="download">download</a> -->
+
+        <script type="module" src="js/main.js"></script>
+        <script type="text/javascript" src="js/read.js"></script>
+        <script type="text/javascript" src="js/vecDraw.js"></script>
+        <script type="text/javascript" src="js/tileParse.js"></script>
+        <script type="text/javascript" src="js/load.js"></script>
     </body>
 </html>

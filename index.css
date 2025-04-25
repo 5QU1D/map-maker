@@ -1,4 +1,37 @@
-.canvas {
-    /* width: 40%;
-    height: 40%; */
+#title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: "Fredericka the Great", serif;
+}
+
+.body {
+    font-size: 100%;
+}
+
+#FileInput {
+    margin-left: 20%;
+    padding-bottom: 20px;
+}
+
+#map {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+#finMap {
+    max-width: 800px;
+    width: auto;
+    height: auto;
+}
+
+#desc {
+    padding-top: 15px;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
 }

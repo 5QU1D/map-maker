@@ -37,7 +37,7 @@ function read(event) {
 
             document
                 .getElementById('fileContents')
-                .textContent = 'width ' + width + ' tiles ' + tileW + ' height ' + height + ' tiles ' + tileH;
+                // .textContent = 'width ' + width + ' tiles ' + tileW + ' height ' + height + ' tiles ' + tileH;
 
             // copying information from the file into the global variables defined in main.js  
             tilesHeight = height;
