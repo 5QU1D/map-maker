@@ -242,11 +242,8 @@ async function blobber() {
       const url = URL.createObjectURL(blob);
       console.log(url);
       document.getElementById('finMap').src = url;
-      // document.getElementById('download').href = url;
-
-      //adding functionality to download image
-      // var image = url.replace("image/png", "image/octet-stream"); //Convert image to 'octet-stream' (Just a download, really)
-      // window.location.href = image; //launches new window with png
+      document.getElementById('download').href = url;
+      document.getElementById('download').style.display = 'block';
     })
   })
 }
