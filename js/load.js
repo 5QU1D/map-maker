@@ -6,6 +6,7 @@ document
 
         reader.onload = function (event) {
             read(event);
+            document.getElementById('loader').style.display='block';
             drawGrid(tilesWidth,tilesHeight);
             blobber();
         };

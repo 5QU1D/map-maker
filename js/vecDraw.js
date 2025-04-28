@@ -245,7 +245,8 @@ async function blobber() {
   tileParse().then(() => {
     canvas.toBlob((blob) => {
       const url = URL.createObjectURL(blob);
-      console.log(url);
+      // console.log(url);
+      document.getElementById('loader').style.display = 'none';
       document.getElementById('finMap').src = url;
       document.getElementById('download').href = url;
       document.getElementById('download').style.display = 'block';
