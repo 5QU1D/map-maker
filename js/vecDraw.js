@@ -8,6 +8,11 @@ function drawGrid(width,height){
   if (canvas.getContext) {
     const ctxt = canvas.getContext("2d");
     ctxt.save();
+
+    //add white background to canvas
+    ctxt.fillStyle = "white";
+    ctxt.fillRect(0, 0, canvas.width, canvas.height);
+
     ctxt.beginPath();
 
     ctxt.strokeStyle = "black";
@@ -235,9 +240,9 @@ function drawValley(tileRow, tileCol, extremeness){
   }) 
 }
 
+//convert canvas to png
 async function blobber() {
   tileParse().then(() => {
-    //adding a breakpoint here means it all fires correctly, but no break point means incorrect firing
     canvas.toBlob((blob) => {
       const url = URL.createObjectURL(blob);
       console.log(url);

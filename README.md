@@ -26,12 +26,10 @@ A project by Syd A.
 ## To Do
 - [x] File generation program *(4/9)*
   - [ ] Add documentation to README file for program, and link in this project's README
-- [ ] Export canvas to PNG for display and download
-  - [ ] Display *(partial implementation done 4/22)*
-  - [ ] Download
-- [ ] Two more extremenesses per tile type for first set (5 extremenesses in total)
-- [ ] Two tile variant sets
-    - [ ] Desert
-    - [ ] Tropical? or Tundra? or maybe Savannah?
+- [x] Export canvas to PNG for display and download
+  - [x] Display *(partial implementation done 4/22; finished 4/23)*
+  - [x] Download *(4/28)*
+- [x] Two more extremenesses per tile type for first set (5 extremenesses in total) *(4/24)*
+- [ ] One very nice tile set
 - [ ] Clean UI (90s aesthetic?)
 - [ ] Usage guidance written
