@@ -1,20 +1,28 @@
 #title {
     text-align: center;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: bolder;
     font-family: "Fredericka the Great", serif;
 }
 
-.body {
+body {
     font-size: 100%;
+    background-image: url(./assets/5006.png);
+    background-color: antiquewhite;
+}
+
+/* class properties lead with . */
+.footer {
+    font-size: .7em;
+    text-align: center;
 }
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #555; /* Blue */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     animation: spin 2s linear infinite;
 }
   
@@ -23,6 +31,7 @@
     100% { transform: rotate(360deg); }
 }
 
+/* id properties lead with # */
 #FileInput {
     margin-left: 20%;
     padding-bottom: 20px;
@@ -50,7 +59,7 @@
 
 #desc {
     padding-top: 15px;
-    width: 90%;
+    width: 70%;
     margin: auto;
     text-align: justify;
 }

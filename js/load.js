@@ -5,6 +5,7 @@ document
         let reader = new FileReader();
 
         reader.onload = function (event) {
+            document.getElementById('finMap').src='';
             read(event);
             document.getElementById('loader').style.display='block';
             drawGrid(tilesWidth,tilesHeight);

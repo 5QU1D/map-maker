@@ -11,23 +11,45 @@
 
     <body>
         <div id="title">Map Drawer</div>
-        <canvas id="canvas" style="display: none;"></canvas> <!-- use this one to hide canvas -->
+        <canvas id="canvas" style="display: none;"></canvas>
 
         <input type="file" id="FileInput">
 
         <div id="map">
             <div class="loader" id="loader" style="display: none;"></div>
-            <img id="finMap", crossorigin="anonymous" src="https://placehold.co/1200x800"><img> <!-- remove src content when finished calibrating! -->
+            <img id="finMap", crossorigin="anonymous" src=""><img> <!-- test src: https://placehold.co/1200x800 -->
         </div>
 
         <a download id="download" href="" style="display: none;"><button>Download</button></a>
 
         <div id="desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor tempus quam, ac pretium purus facilisis ut. Pellentesque ut dolor velit. Suspendisse dictum velit in nisi semper suscipit. Suspendisse ut leo eget ligula volutpat tempus ut id nibh. Donec quis lorem et diam egestas dignissim id porttitor sem. Maecenas quis semper tellus, sed ullamcorper magna. Nullam sit amet dui maximus, cursus nunc eu, efficitur sapien. Nam mattis sit amet tellus pulvinar dapibus. Phasellus ac porta arcu. Aenean hendrerit id mi id lacinia.</p>
-            <p>Nam viverra turpis sit amet massa gravida, quis consectetur leo auctor. Nunc at interdum urna, nec pellentesque ante. Fusce eu lacus non tortor lobortis egestas eu sit amet nunc. Cras aliquam, purus at pretium sollicitudin, eros turpis finibus felis, nec placerat orci eros at sapien. Morbi mi massa, hendrerit a sollicitudin at, rhoncus ut arcu. Pellentesque vestibulum augue vel elit ultrices semper. Vestibulum vel purus enim. Maecenas semper fermentum quam, a rutrum felis feugiat sed. Sed metus lorem, congue vitae urna eget, ultricies eleifend leo.</p>
-            <p>Proin at ullamcorper sapien, id laoreet nunc. Cras urna leo, aliquet et lobortis sed, feugiat ac mauris. Aenean euismod felis a molestie convallis. Sed sem enim, dignissim vel tristique molestie, accumsan et ante. Donec tempus dolor feugiat eleifend commodo. Aliquam id dolor placerat magna tristique accumsan ut ac massa. Duis luctus justo a vestibulum pellentesque. Nunc hendrerit, metus in faucibus porta, est velit elementum augue, id porta dui magna a orci.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim tortor a condimentum commodo. Duis orci turpis, dignissim quis mattis a, feugiat quis sapien. Etiam placerat justo id hendrerit interdum. In est quam, faucibus ut erat sed, tempor auctor turpis. Maecenas massa tortor, volutpat sit amet lorem vel, elementum consequat nisl. Mauris in vestibulum leo. Vestibulum a magna at lectus sodales congue.</p>
-            <p>Nulla sodales urna in nulla efficitur ornare. Nunc vitae laoreet libero, ut ultricies justo. Vivamus augue mauris, hendrerit ut ex quis, blandit elementum nunc. Sed imperdiet ut enim fringilla aliquam. Morbi fringilla, magna sit amet hendrerit suscipit, ex ipsum iaculis purus, molestie tristique arcu purus ut purus. Suspendisse ut velit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed at lectus dignissim, varius justo nec, suscipit eros. Mauris nec lacus eget ligula eleifend facilisis. Maecenas risus mauris, dictum vel maximus quis, finibus ut arcu. Proin eget libero dolor. </p>
+            <p>Supported file format: <b>.txt</b></p>
+            <p>File structure:</p>
+            <ul>
+                <li>FIRST LINE: HEIGHT WIDTH</li>
+                <li>SUBSEQUENT LINES: Tile values, in the following format: <b>(L,N)</b>
+                    <ul>
+                        <li>where <i>L</i> is V, F, M, S, R and <i>N</i> is between 1-5 <b>OR</li>
+                        <li></b> L and N are <u>both</u> <b>0</b>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><b>HEIGHT</b> and <b>WIDTH</b> are both integers. You should have HEIGHT number of rows, with WIDTH number of (L,N) pairs separated by a single space.</p>
+            <p>Users may choose to utilize the C++ program found within <a href="https://github.com/5QU1D/map-file-gen">this GitHub repo</a> to generate a map file.</p>
+
+            <p></p>
+            <p>
+            <p>EXAMPLE FILE:</p>
+            5 4<br>
+            (F,1) (M,1) (0,0) (R,1) (0,0)<Br>
+            (0,0) (M,1) (0,0) (R,1) (0,0)<br>
+            (M,1) (M,1) (M,1) (R,1) (R,1)<Br>
+            (M,1) (R,1) (0,0) (C,1) (V,1)<Br>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Background image by background-tiles.com</p>
         </div>
 
         <script type="module" src="js/main.js"></script>
