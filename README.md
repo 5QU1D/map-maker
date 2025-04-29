@@ -2,6 +2,8 @@
 
 A project by Syd A.
 
+Access the hosted project [HERE](https://5qu1d.github.io/map-drawer/).
+
 ## Progress
 
 - js, json, and html files added *(2/11)*
