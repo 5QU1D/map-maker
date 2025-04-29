@@ -6,19 +6,19 @@ async function tileParse(){
 
             switch(type) {
                 case 'R':
-                    await drawRiver(row,col, extremeness);
+                    await drawRiver(row, col, extremeness);
                     break;
                 case 'M':
-                    await drawMountain(row,col, extremeness);
+                    await drawMountain(row, col, extremeness);
                     break;
                 case 'V':
-                    await drawValley(row,col, extremeness);
+                    await drawValley(row, col, extremeness);
                     break;
-                case 'C':
-                    await drawSettlement(row,col, extremeness);
+                case 'S':
+                    await drawSettlement(row, col, extremeness);
                     break;
                 case 'F':
-                    await drawForest(row,col, extremeness);
+                    await drawForest(row, col, extremeness);
                     break;
                 default:
                     //leave blank
