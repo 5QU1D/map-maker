@@ -63,3 +63,9 @@ body {
     margin: auto;
     text-align: justify;
 }
+
+#example{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
