@@ -1,8 +1,8 @@
 function read(event) {
     const file = event.target.result;
             //tiles are 120px squares, so we set the width and height to reflect a single tile
-            let width = 120;
-            let height = 120;
+            let width = 300;
+            let height = 300;
 
             //read in file data
             const line = file.split(/\r\n|\n/);
