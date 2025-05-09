@@ -20,12 +20,12 @@ function drawGrid(width,height){
     var pad = 10; //padding
     //adjust width and height to account for external grid padding
 
-    for(var x = 0; x <= width; x += 120){
+    for(var x = 0; x <= width; x += 300){
       ctxt.moveTo(0.5 + x + pad, pad);
       ctxt.lineTo(0.5 + x + pad, height+pad);
     }
 
-    for (var y = 0; y <=height; y+=120){
+    for (var y = 0; y <=height; y+=300){
       ctxt.moveTo(pad, 0.5 + y + pad);
       ctxt.lineTo(width + pad, 0.5 + y + pad);
     }
@@ -40,7 +40,7 @@ function drawRiver(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image(300,300);
       image.crossOrigin="anonymous";
 
       switch(extremeness){
@@ -65,8 +65,8 @@ function drawRiver(tileRow, tileCol, extremeness){
       }
 
       image.onload = () => {
-        startX = (tileCol*120)+10;
-        startY = (tileRow*120)+10;
+        startX = (tileCol*300)+10;
+        startY = (tileRow*300)+10;
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
         resolve();
@@ -82,7 +82,7 @@ function drawMountain(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image(300,300);
       image.crossOrigin="anonymous";
 
       switch(extremeness){
@@ -107,8 +107,8 @@ function drawMountain(tileRow, tileCol, extremeness){
       }
 
       image.onload = () => {
-        startX = (tileCol*120)+10;
-        startY = (tileRow*120)+10;
+        startX = (tileCol*300)+10;
+        startY = (tileRow*300)+10;
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
         resolve();
@@ -123,7 +123,7 @@ function drawSettlement(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image(300,300);
       image.crossOrigin="anonymous";
 
       switch(extremeness){
@@ -148,8 +148,8 @@ function drawSettlement(tileRow, tileCol, extremeness){
       }
 
       image.onload = () => {
-        startX = (tileCol*120)+10;
-        startY = (tileRow*120)+10;
+        startX = (tileCol*300)+10;
+        startY = (tileRow*300)+10;
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
         resolve();
@@ -164,7 +164,7 @@ function drawForest(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image(300,300);
       image.crossOrigin="anonymous";
 
       switch(extremeness){
@@ -189,8 +189,8 @@ function drawForest(tileRow, tileCol, extremeness){
       }
 
       image.onload = function(){
-        startX = (tileCol*120)+10;
-        startY = (tileRow*120)+10;
+        startX = (tileCol*300)+10;
+        startY = (tileRow*300)+10;
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
         resolve();
@@ -205,7 +205,7 @@ function drawValley(tileRow, tileCol, extremeness){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctxt = canvas.getContext("2d");
-      var image = new Image(120,120);
+      var image = new Image(300,300);
       image.crossOrigin="anonymous";
 
       switch(extremeness){
@@ -230,8 +230,8 @@ function drawValley(tileRow, tileCol, extremeness){
       }
 
       image.onload = () => {
-        startX = (tileCol*120)+10;
-        startY = (tileRow*120)+10;
+        startX = (tileCol*300)+10;
+        startY = (tileRow*300)+10;
 
         ctxt.drawImage(image, startX, startY, image.width, image.height);
         resolve();
