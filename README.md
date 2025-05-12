@@ -32,6 +32,7 @@ Access the hosted project [HERE](https://5qu1d.github.io/map-drawer/).
   - [x] Display *(partial implementation done 4/22; finished 4/23)*
   - [x] Download *(4/28)*
 - [x] Two more extremenesses per tile type for first set (5 extremenesses in total) *(4/24)*
-- [x] One very nice tile set *(4/30)*
+- [x] ~~One very nice tile set *(4/30)*~~
+- [x] Three variant tilesets with functionality *(5/11)*
 - [x] Clean UI (90s aesthetic?) *(4/27)*
 - [ ] Usage guidance written

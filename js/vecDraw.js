@@ -498,7 +498,7 @@ function drawcolGrid(width,height){
   }
 }
 
-//draw valley
+//draw blank tile for color tileset
 function coldrawBlank(tileRow, tileCol){
   return new Promise((resolve) => {
     const canvas = document.getElementById("canvas");
