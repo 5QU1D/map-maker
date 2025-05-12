@@ -8,6 +8,7 @@ document
             document.getElementById('finMap').src='';
             read(event);
             document.getElementById('loader').style.display='block';
+            radioVal = getSelectedRadioValue("tileset");
             drawGrid(tilesWidth,tilesHeight);
             blobber();
         };
