@@ -45,23 +45,23 @@ function drawRiver(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case '1':
-          image.src = 'assets/rivers/River1.svg';
+          image.src = 'assets/hand-drawn/rivers/River1.svg';
           break;
         case '2':
-          image.src = 'assets/rivers/River2.svg';
+          image.src = 'assets/hand-drawn/rivers/River2.svg';
           break;
         case '3':
-          image.src = 'assets/rivers/River3.svg';
+          image.src = 'assets/hand-drawn/rivers/River3.svg';
           break;
         case '4':
-          image.src = 'assets/rivers/River4.svg';
+          image.src = 'assets/hand-drawn/rivers/River4.svg';
           break;
         case '5':
-          image.src = 'assets/rivers/River5.svg';
+          image.src = 'assets/hand-drawn/rivers/River5.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/rivers/River.svg';
+          image.src = 'assets/hand-drawn/rivers/River.svg';
       }
 
       image.onload = () => {
@@ -87,23 +87,23 @@ function drawMountain(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case '1':
-          image.src = 'assets/mountains/Mountain1.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountain1.svg';
           break;
         case '2':
-          image.src = 'assets/mountains/Mountain2.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountain2.svg';
           break;
         case '3':
-          image.src = 'assets/mountains/Mountain3.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountain3.svg';
           break;
         case '4':
-          image.src = 'assets/mountains/Mountain4.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountain4.svg';
           break;
         case '5':
-          image.src = 'assets/mountains/Mountain5.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountain5.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/mountains/Mountains.svg';
+          image.src = 'assets/hand-drawn/mountains/Mountains.svg';
       }
 
       image.onload = () => {
@@ -128,23 +128,23 @@ function drawSettlement(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case '1':
-          image.src = 'assets/settlements/Settlement1.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement1.svg';
           break;
         case '2':
-          image.src = 'assets/settlements/Settlement2.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement2.svg';
           break;
         case '3':
-          image.src = 'assets/settlements/Settlement3.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement3.svg';
           break;
         case '4':
-          image.src = 'assets/settlements/Settlement4.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement4.svg';
           break;
         case '5':
-          image.src = 'assets/settlements/Settlement5.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement5.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/settlements/Settlement.svg';
+          image.src = 'assets/hand-drawn/settlements/Settlement.svg';
       }
 
       image.onload = () => {
@@ -169,23 +169,23 @@ function drawForest(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case '1':
-          image.src = 'assets/forests/Forest1.svg';
+          image.src = 'assets/hand-drawn/forests/Forest1.svg';
           break;
         case '2':
-          image.src = 'assets/forests/Forest2.svg';
+          image.src = 'assets/hand-drawn/forests/Forest2.svg';
           break;
         case '3':
-          image.src = 'assets/forests/Forest3.svg';
+          image.src = 'assets/hand-drawn/forests/Forest3.svg';
           break;
         case '4':
-          image.src = 'assets/forests/Forest4.svg';
+          image.src = 'assets/hand-drawn/forests/Forest4.svg';
           break;
         case '5':
-          image.src = 'assets/forests/Forest5.svg';
+          image.src = 'assets/hand-drawn/forests/Forest5.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/forests/Forest.svg';
+          image.src = 'assets/hand-drawn/forests/Forest.svg';
       }
 
       image.onload = function(){
@@ -210,23 +210,23 @@ function drawValley(tileRow, tileCol, extremeness){
 
       switch(extremeness){
         case '1':
-          image.src = 'assets/valleys/Valley1.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley1.svg';
           break;
         case '2':
-          image.src = 'assets/valleys/Valley2.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley2.svg';
           break;
         case '3':
-          image.src = 'assets/valleys/Valley3.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley3.svg';
           break;
         case '4':
-          image.src = 'assets/valleys/Valley4.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley4.svg';
           break;
         case '5':
-          image.src = 'assets/valleys/Valley5.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley5.svg';
           break;
         default:
           //use original tile as default
-          image.src = 'assets/valleys/Valley.svg';
+          image.src = 'assets/hand-drawn/valleys/Valley.svg';
       }
 
       image.onload = () => {
