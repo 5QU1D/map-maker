@@ -6,22 +6,40 @@ async function tileParse(){
 
             switch(type) {
                 case 'R':
-                    await drawRiver(row, col, extremeness);
+                    if(radioVal=="fullsketch") {await drawRiver(row, col, extremeness);}
+                    else if (radioVal=="noext") {await drawRiver(row, col, 6);}
+                    //implement coldrawDriver
+                    else if (radioVal=="colortiles") {await coldrawRiver(row, col, extremeness);}
                     break;
                 case 'M':
-                    await drawMountain(row, col, extremeness);
+                    if(radioVal=="fullsketch") {await drawMountain(row, col, extremeness);}
+                    else if (radioVal=="noext") {await drawMountain(row, col, 6);}
+                    //implement
+                    else if (radioVal=="colortiles") {await coldrawMountain(row, col, extremeness);}
                     break;
                 case 'V':
-                    await drawValley(row, col, extremeness);
+                    if(radioVal=="fullsketch") {await drawValley(row, col, extremeness);}
+                    else if (radioVal=="noext") {await drawValley(row, col, 6);}
+                    //implement
+                    else if (radioVal=="colortiles") {await coldrawValley(row, col, extremeness);}
                     break;
                 case 'S':
-                    await drawSettlement(row, col, extremeness);
+                    if(radioVal=="fullsketch") {await drawSettlement(row, col, extremeness);}
+                    else if (radioVal=="noext") {await drawSettlement(row, col, 6);}
+                    //implement
+                    else if (radioVal=="colortiles") {await coldrawSettlement(row, col, extremeness);}
                     break;
                 case 'F':
-                    await drawForest(row, col, extremeness);
+                    if(radioVal=="fullsketch") {await drawForest(row, col, extremeness);}
+                    else if (radioVal=="noext") {await drawForest(row, col, 6);}
+                    //implement
+                    else if (radioVal=="colortiles") {await coldrawForest(row, col, extremeness);}
                     break;
                 default:
-                    //leave blank
+                    //leave blank unless colortiles
+                    if (radioVal=="colortiles") {
+                        await coldrawBlank(row,col);
+                    }
             }
         }
     }  
