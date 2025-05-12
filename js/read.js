@@ -1,6 +1,6 @@
 function read(event) {
     const file = event.target.result;
-            //tiles are 120px squares, so we set the width and height to reflect a single tile
+            //tiles are 300px squares, so we set the width and height to reflect a single tile
             let width = 300;
             let height = 300;
 

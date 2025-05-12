@@ -32,6 +32,13 @@ body {
 }
 
 /* id properties lead with # */
+#radiobuts {
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 #FileInput {
     margin-left: 20%;
     padding-bottom: 20px;
