@@ -1,6 +1,6 @@
 function read(event) {
     const file = event.target.result;
-            //tiles are 300px squares, so we set the width and height to reflect a single tile
+            //tiles are 300px squares by default, so we set the width and height to reflect a single tile
             let width = 300;
             let height = 300;
 
@@ -37,7 +37,6 @@ function read(event) {
 
             document
                 .getElementById('fileContents')
-                // .textContent = 'width ' + width + ' tiles ' + tileW + ' height ' + height + ' tiles ' + tileH;
 
             // copying information from the file into the global variables defined in main.js  
             tilesHeight = height;
