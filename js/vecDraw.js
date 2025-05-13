@@ -248,7 +248,7 @@ async function blobber() {
       // console.log(url);
       document.getElementById('loader').style.display = 'none';
       document.getElementById('finMap').src = url;
-      document.getElementById('download').href = url;
+      document.getElementById('download').href = url + '?' + (new Date().getTime());
       document.getElementById('download').style.display = 'block';
     })
   })
