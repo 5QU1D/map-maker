@@ -27,7 +27,7 @@ Access the hosted project [HERE](https://5qu1d.github.io/map-maker/).
 
 ## To Do
 - [x] File generation program *(4/9)*
-  - [ ] Add documentation to README file for program, and link in this project's README
+  - [x] Add documentation to README file for program, and link in this project's README *(5/12)*
 - [x] Export canvas to PNG for display and download
   - [x] Display *(partial implementation done 4/22; finished 4/23)*
   - [x] Download *(4/28)*
@@ -35,4 +35,4 @@ Access the hosted project [HERE](https://5qu1d.github.io/map-maker/).
 - [x] ~~One very nice tile set *(4/30)*~~
 - [x] Three variant tilesets with functionality *(5/11)*
 - [x] Clean UI (90s aesthetic?) *(4/27)*
-- [ ] Usage guidance written
+- [x] Usage guidance written *(5/12)*
