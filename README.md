@@ -2,7 +2,7 @@
 
 A project by Syd A.
 
-Access the hosted project [HERE](https://5qu1d.github.io/map-drawer/).
+Access the hosted project [HERE](https://5qu1d.github.io/map-maker/).
 
 ## Progress
 
