@@ -5,7 +5,7 @@ document
         let reader = new FileReader();
 
         reader.onload = function (event) {
-            document.getElementById('finMap').src='' + (new Date().getTime());
+            document.getElementById('finMap').src='' + '?' + (new Date().getTime());
             read(event);
             document.getElementById('loader').style.display='block';
 
