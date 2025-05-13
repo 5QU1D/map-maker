@@ -51,3 +51,5 @@ Project goals for the scope of the course, with a deadline of 5/14, have been co
     - [ ] If all neighbors already visited, place river end, connecting toward last visited river neighbor
     - [ ] If discovered unvisited river tile, place connective tile
 - [ ] Implement either noise map or collapsing wave in the file generator for bias toward placing like tiles together
+- [ ] More tilesets! What kind? No clue (yet)
+  - [ ] Except I'd really like to do a traditional Chinese art inspired set
