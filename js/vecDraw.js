@@ -10,7 +10,8 @@ function drawGrid(width,height){
     ctxt.save();
 
     //add white background to canvas
-    ctxt.fillStyle = "white";
+    // ctxt.fillStyle = "white";
+    ctxt.fillStyle = document.getElementById("map-bg").value;
     ctxt.fillRect(0, 0, canvas.width, canvas.height);
 
     ctxt.beginPath();
