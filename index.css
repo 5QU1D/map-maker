@@ -65,10 +65,11 @@ body {
 }
 
 #desc {
-    padding-top: 15px;
+    padding: 15px;
     width: 70%;
     margin: auto;
     text-align: justify;
+    background-color: rgba(222, 215, 171, .4);
 }
 
 #example{
