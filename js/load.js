@@ -26,6 +26,7 @@ document
             //all other adjustments for function calls are in tileParse.js
 
             blobber();
+            document.getElementById("FileInput").value = ''; //reset the input file?
         };
 
         reader.onerror = (event) => alert(event.error.name);
