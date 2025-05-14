@@ -34,14 +34,10 @@ document
         }
 
         document.getElementById("runner").addEventListener('click', function() {
-            //check if file has been uploaded first
-            if (document.getElementById('FileInput').files.length === 0) {
-                alert("You have not uploaded a file!");
-                return false;
-            }
-
+            //check map dimensions
             if(tilesWidth/300 > 50 || tilesHeight/300 > 50) {
                 alert("Current advised recommended map size is WITHIN 50 x 50 tiles. See below for more details.");
+                //returns early from function to avoid DOMException due to canvas size limitations and current implementation
                 return false;
             }
 
