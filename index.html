@@ -20,14 +20,18 @@
             <br>
         </div>
         
-        <input type="file" id="FileInput"> <input type="color" id="map-bg" name="map-bg" value="#ffffff">    <label for="map-bg" style="padding-left: 3px;">Map Background Color</label>
+        <input type="file" id="FileInput"> 
+        <input type="color" id="map-bg" name="map-bg" value="#ffffff"> <label for="map-bg" style="padding-left: 3px;">Map Background Color</label>
+        <div id="radiobuts" style="padding-top: 0px;"><button type="button" id="runner">Run</button></div>
 
         <div id="map">
             <div class="loader" id="loader" style="display: none;"></div>
             <img id="finMap", crossorigin="anonymous" src=""><img> <!-- test src: https://placehold.co/1200x800 -->
         </div>
 
+        <p></p>
         <a download id="download" href="" style="display: none;"><button>Download</button></a>
+        <p></p>
 
         <div id="desc">
             <p>Supported file format: <b>.txt</b></p>
@@ -47,7 +51,7 @@
             <p></p>
             
              <p>
-                <b>PLEASE NOTE:</b> The largest advisable size within current program limitations is somewhere in the range of 50 by 50 tiles. Larger than that is likely to cause the generator to appear to be infinitely loading and require a hard page refresh before the generator can be used for any other files. This issue will be addressed in later patches some time after 5/16/2025.
+                <b>PLEASE NOTE:</b> Currently the generator is coded to quit the current operation if <b>EITHER</b> dimension of the map exceeds 50 tiles. This is due to HTML canvas display constraints and the current programming of the generator. The early quitting of the generator operations prevents errors from forcing users to reload the page to continue use. This issue will be addressed in later patches some time after 5/16/2025. 
                 <br><br>
             </p>
             
