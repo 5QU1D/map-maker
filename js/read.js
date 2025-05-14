@@ -15,8 +15,6 @@ function read(event) {
             width = width * tileW;
             height = height * tileH;
 
-            // building 3d arrays : https://stackoverflow.com/questions/4943633/creating-and-parsing-a-3d-array-in-javascript
-
             let threeDArray = new Array();
             
             for (let i = 0; i < tileH; i++) {
@@ -34,9 +32,6 @@ function read(event) {
                     threeDArray[i-1][j][1] = lines[i][3 + 6*j];
                 }
             }
-
-            document
-                .getElementById('fileContents')
 
             // copying information from the file into the global variables defined in main.js  
             tilesHeight = height;

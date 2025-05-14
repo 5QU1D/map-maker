@@ -28,6 +28,7 @@ document
                     drawGrid(tilesWidth,tilesHeight);
                     break;
                 case 'colortiles':
+                    //color tiles are 200px pngs, and thus the input needs to be adjusted for proper operation
                     var numTilesW = tilesWidth/300;
                     var numTilesH = tilesHeight/300;
                     drawcolGrid(200*numTilesW,200*numTilesH);
@@ -36,7 +37,6 @@ document
 
             blobber();
         })
-
 
         reader.onerror = (event) => alert(event.error.name);
         reader.readAsText(file);
